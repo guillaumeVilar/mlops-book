@@ -15,8 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # Job 'test-python-v3.8.16'
+  test-python-v3.8.16:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -24,22 +24,44 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
       - name: Set up Python 3.8.16
         uses: actions/setup-python@v4
         with:
           python-version: 3.8.16
-        
       - name: Install dependencies
         run: |
           cd chap1
           make install
-          
       - name: Lint
         run: |
           cd chap1
           make lint
-          
+      - name: Test
+        run: |
+          cd chap1
+          make test
+
+  # Job 'test-python-v3.11.2'
+  test-python-v3.11.2:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.11.2
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11.2
+      - name: Install dependencies
+        run: |
+          cd chap1
+          make install
+      - name: Lint
+        run: |
+          cd chap1
+          make lint
       - name: Test
         run: |
           cd chap1
