@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # Job 'test-python-v3.8.16'
-  test-python-v3.8.16:
+  test-python-v3-8-16:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -42,7 +42,7 @@ jobs:
           make test
 
   # Job 'test-python-v3.11.2'
-  test-python-v3.11.2:
+  test-python-v3-11-2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
