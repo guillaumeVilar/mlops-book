@@ -1,7 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'europe-west1-docker.pkg.dev/just-amp-373710/quickstart-docker-repo/quickstart-image:tag1', 'test_cloudbuild' ]
-  id: build
-images:
-- 'europe-west1-docker.pkg.dev/just-amp-373710/quickstart-docker-repo/quickstart-image:tag1'
-
