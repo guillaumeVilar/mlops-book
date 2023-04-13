@@ -1,9 +1,11 @@
-FROM nginx
-# COPY nginx.conf /etc/nginx/nginx.conf
-COPY index.html /usr/share/nginx/html/
+FROM python:3.11.3-buster
 
-# # Build 
-# docker build -f Dockerfile -t testwebserver .
+WORKDIR /opt
 
-# Run
-# docker run --name=testwebserver --restart unless-stopped --network host -d -t testwebserver
+COPY . .
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8080
+
+CMD gunicorn hello:app -c gunicorn.conf.py
