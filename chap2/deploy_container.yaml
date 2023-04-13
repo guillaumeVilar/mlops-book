@@ -12,4 +12,4 @@ steps:
   - 'managed'
   - '--allow-unauthenticated'
   - '--port'
-  - '80'
+  - '8080'
