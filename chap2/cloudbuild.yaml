@@ -1,4 +1,14 @@
 steps:
+# Install dependencies
+- name: python
+  entrypoint: pip
+  args: ["install", "-r", "chap2/requirements.txt", "--user"]
+
+# Run unit tests
+- name: python
+  entrypoint: python
+  args: ["-m", "pytest", "chap2"] 
+
 # Docker build
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'europe-west1-docker.pkg.dev/just-amp-373710/quickstart-docker-repo/quickstart-image:tag1', 'chap2' ]
