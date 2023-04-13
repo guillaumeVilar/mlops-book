@@ -22,7 +22,7 @@ steps:
   - 'managed'
   - '--allow-unauthenticated'
   - '--port'
-  - '8080'
+  - '80'
 
 images:
 - 'europe-west1-docker.pkg.dev/just-amp-373710/quickstart-docker-repo/quickstart-image:tag1'

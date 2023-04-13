@@ -6,6 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD gunicorn hello:app -c gunicorn.conf.py
