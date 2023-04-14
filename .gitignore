@@ -130,3 +130,6 @@ dmypy.json
 
 # Ignore ebook file
 *.mobi
+
+# Add .onnx file
+*.onnx
