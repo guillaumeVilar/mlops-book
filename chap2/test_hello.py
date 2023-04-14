@@ -13,6 +13,3 @@ def test_add():
     
     # Test case 4: Test with decimal numbers
     assert add(2.5, 3.5) == 6.0  # Expected result: 2.5 + 3.5 = 6.0
-
-def test_add_failing():
-    assert add(2,3) == 6
